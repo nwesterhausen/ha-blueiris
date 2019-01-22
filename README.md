@@ -53,6 +53,7 @@ blue_iris:
 camera:
   - platform: blueiris
 ```
+### Configuration Details
 
 **username**: username for hass to use to authenticate to your server
 
