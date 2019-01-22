@@ -44,6 +44,17 @@ camera:
   - platform: blueiris
 ```
 
+**username**: username for hass to use to authenticate to your server
+
+**password**: password used for the username
+
+**host**: blue iris host IP or FQDN
+
+**port** *(optional)*: exposed blueiris port, defaults to match protocol (80 for http, 443 for https)
+
+**protocol** *(optional)*: unless you set up https access via a reverse proxy or the tunnel settings in blue iris. defaults to http
+
+**name** *(optional)*: define a name for the blue iris entity (defaults to 'server')
 ## Planned Features
 The following things are planned for this component:
 

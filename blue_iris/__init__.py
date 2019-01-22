@@ -16,7 +16,7 @@ CONF_PROTOCOL = 'protocol'
 REQUIREMENTS = ['pyblueiris==0.2.8']
 
 DEFAULT_PROTOCOL = "http"
-DEFAULT_PORT = 1
+DEFAULT_PORT = 1  # This is set as the default, a 1 is changed to 80 for http and 443 for https
 DEFAULT_NAME = "server"
 
 ENTITY_ID_FORMAT = 'blue_iris.{}'
