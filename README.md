@@ -4,26 +4,36 @@ Custom component for Home Assistant which connects to your blue iris server.
 
 Configuring the base component in your configuration file will allow it to automatically add your cameras by using the blue_iris platform. (This is set up similar to how the [zoneminder](https://www.home-assistant.io/components/zoneminder/) component is set up.)
 
-## Currently Working Features
-(see [planned features below](#planned-features) for what is planned to be implemented)
+## Features Roadmap
+Both planned and completed, as indicated by checkboxes.
 
 **Server Component**
-- Provides platform for the cameras
-- Shows how many cameras it detects
-- Shows Blue Iris version
-- Shows available profiles
-- Shows available schedules
-- Shows whether the login provided is admin or not
-- Is named after what you named your Blue Iris server
-- Shows the JSON Endpoint that its using
+- [x] Provides platform for the cameras
+- [x] Shows how many cameras it detects
+- [x] Shows Blue Iris version
+- [x] Shows available profiles
+- [x] Shows available schedules
+- [x] Shows whether the login provided is admin or not
+- [x] Is named after what you named your Blue Iris server
+- [x] Shows the JSON Endpoint that its using
+- [ ] Service calls
+  - [ ] Setting the signal
+  - [ ] Setting the global profile
+  - [ ] Retrieving logs
 
 **Camera**
-- Connects an mjpeg stream to your camera
-- Responds to the standard camera component commands:
-  - Enable
-  - Disable
-  - Motion_On
-  - Motion_Off
+- [x] Connects an mjpeg stream to your camera
+- [x] Responds to the standard camera component commands:
+  - [x] Enable
+  - [x] Disable
+  - [x] Motion_On
+  - [x] Motion_Off
+- [ ] Service calls
+  - [ ] Trigger recording
+  - [ ] Trigger 'motion'
+  - [ ] PTZ Commands
+  
+I believe there are some more calls available to the JSON API, which should be considered planned for the future -- it'd be nice to have this component be able to do everything the API allows.
 
 ## Installation
 
@@ -55,18 +65,3 @@ camera:
 **protocol** *(optional)*: unless you set up https access via a reverse proxy or the tunnel settings in blue iris. defaults to http
 
 **name** *(optional)*: define a name for the blue iris entity (defaults to 'server')
-## Planned Features
-The following things are planned for this component:
-
-**Server Component**
-- Service calls to allow
-  - setting the Signal
-  - setting the global profile
-  - getting logs
-  - basically everything non-camera specific the API can do..
-
-**Camera Component**
-- Trigger recording
-- Set off motion events
-- PTZ Control?
-- Other camera-specific API commands.
