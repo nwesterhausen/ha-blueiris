@@ -13,7 +13,7 @@ DOMAIN = 'blue_iris'
 _LOGGER = logging.getLogger(__name__)
 
 CONF_PROTOCOL = 'protocol'
-REQUIREMENTS = ['pyblueiris==0.2.8']
+REQUIREMENTS = ['pyblueiris==0.2.10']
 
 DEFAULT_PROTOCOL = "http"
 DEFAULT_PORT = 1  # This is set as the default, a 1 is changed to 80 for http and 443 for https
